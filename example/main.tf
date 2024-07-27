@@ -5,6 +5,14 @@ module "kubernetes" {
   cluster_version = "v1.29.4+1"
 }
 
+# local kubernetes option
+# 
+# module "kubernetes" {
+#   source = "git::https://github.com/ruanbekker/terraform-kubernetes-kind-module.git?ref=main"
+
+#   cluster_name    = "test-cluster"
+# }
+
 module "apps" {
   source = "../"
   
