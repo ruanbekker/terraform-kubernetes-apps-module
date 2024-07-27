@@ -9,7 +9,8 @@ module "apps" {
   source = "../"
   
   apps = [
-    "whoami"
+    "whoami",
+    "argo-cd"
   ]
 
   cluster_endpoint       = module.kubernetes.endpoint

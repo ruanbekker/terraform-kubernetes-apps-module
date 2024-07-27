@@ -1,0 +1,18 @@
+# Default values for argo-cd.
+# Source: https://github.com/argoproj/argo-helm/blob/argo-cd-7.3.11/charts/argo-cd/values.yaml
+
+# -- Provide a name in place of `argocd`
+nameOverride: argocd
+
+## Globally shared configuration
+global:
+  # -- Common labels for the all resources
+  additionalLabels: {}
+
+## Argo Configs
+configs:
+  # General Argo CD configuration
+  ## Ref: https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/argocd-cm.yaml
+  params:
+    server.insecure: true
+

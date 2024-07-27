@@ -12,6 +12,12 @@ This Terraform module deploys Helm releases to your Kubernetes cluster using the
 - Use default configurations or provide custom values.
 - Automatically creates namespaces if specified.
 
+## Applications Available
+
+A list of available apps can be found in the variable `release` defined in [./variables.tf](./variables.tf).
+
+To install them, you can pass them to the `apps` list variable, for a example see [examples](#example).
+
 ## Requirements
 
 No requirements.

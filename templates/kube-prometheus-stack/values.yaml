@@ -1,0 +1,14 @@
+# Default values for kube-prometheus-stack.
+# Source: https://github.com/prometheus-community/helm-charts/blob/kube-prometheus-stack-61.4.0/charts/kube-prometheus-stack/values.yaml
+
+## Using default values from https://github.com/grafana/helm-charts/blob/main/charts/grafana/values.yaml
+grafana:
+  enabled: true
+
+## Manages Prometheus and Alertmanager components
+prometheusOperator:
+  enabled: true
+
+## Deploy a Prometheus instance
+prometheus:
+  enabled: true

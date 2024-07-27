@@ -25,6 +25,22 @@ variable "release" {
     values_file      = string
   }))
   default = {
+    argo-cd = {
+      chart            = "argo-cd"
+      repository       = "https://argoproj.github.io/argo-helm"
+      version          = "7.3.11"
+      namespace        = "apps"
+      create_namespace = true
+      values_file      = "templates/argo-cd/values.yaml"
+    }
+    kube-prometheus-stack = {
+      chart            = "kube-prometheus-stack"
+      repository       = "https://prometheus-community.github.io/helm-charts"
+      version          = "61.4.0"
+      namespace        = "apps"
+      create_namespace = true
+      values_file      = "templates/kube-prometheus-stack/values.yaml"
+    }
     whoami = {
       chart            = "whoami"
       repository       = "https://cowboysysop.github.io/charts/"
